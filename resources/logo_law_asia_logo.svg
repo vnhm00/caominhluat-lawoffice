@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">LAW ASIA Logo</title>
+  <desc id="desc">Stylized LAW ASIA wordmark in red on transparent background with a dot circle.</desc>
+  <g fill="#ef1224" font-family="'Times New Roman', Times, serif" font-weight="700" text-anchor="middle">
+    <text x="160" y="140" font-size="108" letter-spacing="2">LAW</text>
+    <text x="160" y="244" font-size="108" letter-spacing="2">ASIA</text>
+  </g>
+  <circle cx="205" cy="168" r="38" fill="#ef1224"/>
+  <text x="205" y="180" font-family="'Times New Roman', Times, serif" font-size="34" font-weight="700" fill="#000000" text-anchor="middle">dot</text>
+</svg>
