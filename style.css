@@ -375,26 +375,12 @@ img {
 }
 
 .hero-title {
-	font-family: "Times New Roman", Times, serif;
-	font-size: clamp(2.5rem, 6vw, 4.5rem);
-	font-weight: 700;
-	color: #fff;
-	line-height: 1.1;
 	margin-bottom: 1.5rem;
-	white-space: nowrap;
-	transform: scaleX(0.67);
-	transform-origin: center;
 }
 
-.hero-title sup {
-	display: inline-block;
-	font-size: 0.55em;
-	font-weight: 400;
-	vertical-align: super;
-	margin-left: 1px;
-	opacity: 0.75;
-	transform: scaleX(1.4925);
-	transform-origin: left center;
+.hero-title-svg {
+	display: block;
+	width: clamp(195px, 29.3vw, 352px);
 }
 
 .hero-tagline {
