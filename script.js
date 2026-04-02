@@ -196,11 +196,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var dots = [];
 
     function isActive() {
-      return window.matchMedia('(max-width: 1023px)').matches;
+      return window.matchMedia('(max-width: 1023px)').matches || totalSlides > 4;
     }
 
-    // Mobile = 1 card per page; tablet = 2 cards per page
     function getItemsPerPage() {
+      if (window.matchMedia('(min-width: 1024px)').matches) return 4;
       return window.matchMedia('(min-width: 640px)').matches ? 2 : 1;
     }
 
@@ -208,7 +208,19 @@ document.addEventListener('DOMContentLoaded', function () {
       return Math.ceil(totalSlides / getItemsPerPage());
     }
 
+    function syncMode() {
+      carousel.classList.toggle(
+        'team-carousel-desktop-active',
+        window.matchMedia('(min-width: 1024px)').matches && totalSlides > 4
+      );
+    }
+
     function renderDots() {
+      if (!isActive()) {
+        dotsContainer.innerHTML = '';
+        dots = [];
+        return;
+      }
       var pages = getTotalPages();
       dotsContainer.innerHTML = '';
       dots = [];
@@ -259,11 +271,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { passive: true });
 
     window.addEventListener('resize', function () {
+      syncMode();
       if (!isActive()) {
         track.style.transform = '';
         currentPage = 0;
+        renderDots();
       } else {
-        // Items-per-page may have changed; rebuild dots and re-snap
         renderDots();
         var pages = getTotalPages();
         currentPage = Math.min(currentPage, pages - 1);
@@ -271,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, { passive: true });
 
-    // Initial render
+    syncMode();
     renderDots();
     if (isActive()) goTo(0);
   }());

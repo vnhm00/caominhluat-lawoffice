@@ -1167,8 +1167,8 @@ img {
 }
 
 .team-avatar {
-	width: 64px;
-	height: 64px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background: linear-gradient(135deg, var(--cmlcolor), var(--cmlcolor-dark));
 	color: #fff;
@@ -1197,7 +1197,7 @@ img {
 	display: block;
 }
 
-.team-badge-lawasia {
+.team-badge {
 	display: inline-block;
 	font-size: 0.7rem;
 	font-weight: 600;
@@ -1229,7 +1229,7 @@ img {
 }
 
 .team-bio {
-	font-size: 0.925rem;
+	font-size: 0.91rem;
 	line-height: 1.7;
 	color: rgba(255, 255, 255, 0.72);
 }
@@ -1294,11 +1294,11 @@ img {
 
 /* 1024px+: flat 4-col grid, no carousel */
 @media (min-width: 1024px) {
-	.team-carousel-viewport {
+	.team-carousel:not(.team-carousel-desktop-active) .team-carousel-viewport {
 		overflow: visible;
 	}
 
-	.team-carousel-track {
+	.team-carousel:not(.team-carousel-desktop-active) .team-carousel-track {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
@@ -1306,12 +1306,16 @@ img {
 		transition: none;
 	}
 
-	.team-carousel-slide {
+	.team-carousel:not(.team-carousel-desktop-active) .team-carousel-slide {
 		display: contents;
 	}
 
-	.team-carousel-nav {
+	.team-carousel:not(.team-carousel-desktop-active) .team-carousel-nav {
 		display: none;
+	}
+
+	.team-carousel.team-carousel-desktop-active .team-carousel-slide {
+		flex: 0 0 25%;
 	}
 }
 
