@@ -576,6 +576,10 @@ img {
 	text-wrap: balance;
 }
 
+.recognition-band-title--en {
+	font-size: clamp(1.15rem, 2vw, 1.62rem);
+}
+
 .recognition-band-note {
 	margin-top: 0.4rem;
 	font-size: 0.92rem;
@@ -605,7 +609,6 @@ img {
 	background: var(--bg-white);
 }
 
-#gioi-thieu.section,
 #about.section {
 	padding-bottom: 0;
 }
@@ -1732,7 +1735,7 @@ img {
    INTERNATIONAL SERVICES
    ═══════════════════════════════════════════════ */
 
-#quoc-te {
+#international-services {
 	position: relative;
 	background: #130305;
 	color: #fff;
@@ -1740,7 +1743,7 @@ img {
 	overflow: hidden;
 }
 
-#quoc-te::before {
+#international-services::before {
 	content: '';
 	position: absolute;
 	inset: 0;
@@ -1750,7 +1753,7 @@ img {
 	z-index: 0;
 }
 
-#quoc-te::after {
+#international-services::after {
 	content: '';
 	position: absolute;
 	inset: 0;
@@ -1762,18 +1765,18 @@ img {
 	z-index: 0;
 }
 
-#quoc-te > .container {
+#international-services > .container {
 	position: relative;
 	z-index: 1;
 }
 
-#quoc-te .intl-icon--a {
+#international-services .intl-icon--a {
 	border-color: transparent;
 	width: 44px;
 	height: 44px;
 }
 
-#quoc-te .intl-icon svg {
+#international-services .intl-icon svg {
 	width: 22px;
 	height: 22px;
 }
@@ -1856,14 +1859,14 @@ img {
 	.intl-bridge-line--r {
 		background: linear-gradient(to left, transparent, rgba(200,164,94,0.5));
 	}
-	#quoc-te .intl-bridge-center {
+	#international-services .intl-bridge-center {
 		order: -1;
 		padding: 0;
 	}
-	#quoc-te .section-header {
+	#international-services .section-header {
 		margin-bottom: 1rem;
 	}
-	#quoc-te .intl-bridge-layout {
+	#international-services .intl-bridge-layout {
 		gap: 1rem;
 	}
 }
