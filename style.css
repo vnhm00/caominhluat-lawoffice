@@ -1870,3 +1870,60 @@ img {
 		gap: 1rem;
 	}
 }
+
+/* ─── EN page order: About → International → Team ─── */
+#about.about-standalone {
+	padding-bottom: var(--section-padding);
+}
+
+/* Cross-border on a light background: same design as the dark VN
+   version, only the colours are flipped */
+#international-services.intl-parchment {
+	background: #f3ede1;
+	color: var(--text-primary);
+	border-top: none;
+}
+
+/* Same wave pattern as the dark version, in dark lines instead of white */
+#international-services.intl-parchment::before {
+	filter: invert(1);
+}
+
+/* Globe pattern sits 80px lower than on the VN page */
+#international-services.intl-parchment::after {
+	background-position: center calc(50% + 80px);
+	background-repeat: no-repeat;
+}
+
+#international-services.intl-parchment .section-label-light {
+	color: var(--cmlcolor);
+}
+
+#international-services.intl-parchment .section-title-light {
+	color: var(--text-primary);
+}
+
+#international-services.intl-parchment .section-desc-light {
+	color: var(--text-secondary);
+}
+
+#international-services.intl-parchment .intl-card {
+	background: rgba(255, 255, 255, 0.72);
+	border-color: rgba(0, 0, 0, 0.08);
+}
+
+#international-services.intl-parchment .intl-card:hover {
+	background: rgba(255, 255, 255, 0.85);
+}
+
+#international-services.intl-parchment .intl-card h3 {
+	color: var(--text-primary);
+}
+
+#international-services.intl-parchment .intl-card li {
+	color: var(--text-secondary);
+}
+
+.team-band .about-team {
+	margin-top: 0;
+}
